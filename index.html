@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	.foranim{
+		width: 250px;
+		height: 250px;
+		border:5px solid gray;
+		transition:all .5s ease;
+	}
+	.foranim.ng-hide{
+		width: 10px;
+		height: 10px;
+		transform: rotate(720deg);
+
+	}
+	button{
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body ng-app ="myapp">
+    <div ng-controller="mycontrol">
+    	<button ng-click="myfunc()">Show / Hide</button>
+    	<br>
+        <img class="foranim" src="images/trees.jpg" alt="" ng-hide="deyer">
+        
+    </div>
+
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/angular-animate@1.6.9/angular-animate.min.js"></script>
+
+	
+	<script src="stylejs.js"></script>
+</body>
+</html>
